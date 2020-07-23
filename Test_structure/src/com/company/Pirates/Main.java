@@ -38,16 +38,28 @@ public class Main {
             }
 
         }
+        HashMap <Character, Integer> results = new HashMap<>();
+        char result;
+        result = (getMaxKey(chars));
+        results.put(result, chars.get(result));
+        chars.remove(result);
+        result = (getMaxKey(chars));
+        results.put(result, chars.get(result));
 
-        for (int i = 0; i < chars.values().size(); i++) {
-            int maxValue = (Collections.max(chars.values()));
+        return results;
+    }
+
+    public static char getMaxKey(Map<Character, Integer> map) {
+        int max = 0;
+        int currValue;
+        char maxChar = 0;
+        for (char c : map.keySet()) {
+            currValue = map.get(c);
+            if (currValue > max) {
+                max = currValue;
+                maxChar = c;
+            }
         }
-
-
-
-
-
-
-        return chars;
+        return maxChar;
     }
 }
