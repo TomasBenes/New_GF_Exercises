@@ -4,13 +4,22 @@ public class Animal {
     String ownerName;
     boolean isHealthy;
     int healCost;
+    String name;
+
+    public Animal () {
+       this.name = "Animal";
+    }
+
+    public Animal (String name) {
+        this.name = name;
+    }
 
     public void heal () {
         this.isHealthy = true;
     }
 
     public boolean isAdoptable () {
-        if (this.isHealthy == true) {
+        if (this.isHealthy) {
             return true;
         } else {
             return false;
@@ -19,10 +28,10 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
-                "ownerName='" + ownerName + '\'' +
-                ", isHealthy=" + isHealthy +
-                ", healCost=" + healCost +
-                '}';
+        if (!this.isHealthy) {
+            return this.name + " is not healthy (" + this.healCost + "€), and not adoptable";
+        } else {
+            return this.name + " is healthy, and adoptable";
+        }
     }
 }
