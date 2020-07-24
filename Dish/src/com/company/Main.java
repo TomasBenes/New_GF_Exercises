@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -23,15 +25,22 @@ public class Main {
         address - a string, which can be set through the constructor just like the dishes
         Finally create an OfflineOrder which is a special Order, it has one more private field
         table - a number, it is set from the constructor just like the dishes*/
-        Ingredients forBurger1 = new Ingredients();
+
+        ArrayList<Ingredients> mainIngredients = new ArrayList<>();
+
+        Ingredients forBurger1 = new Ingredients("beef", mainIngredients);
         forBurger1.ingredient = "beef";
         forBurger1.amount = 2;
 
-        Ingredients forBurger2 = new Ingredients();
+        Ingredients forBurger2 = new Ingredients("bun", mainIngredients);
         forBurger2.ingredient = "bun";
         forBurger2.amount = 1;
 
-        Dish burger = new Dish("Burger", forBurger1, forBurger2);
+        mainIngredients.add(forBurger1);
+        mainIngredients.add(forBurger2);
+
+
+        Dish burger = new Dish("Burger", mainIngredients);
         System.out.println(burger.getName());
         System.out.println(burger.getIngredients());
 

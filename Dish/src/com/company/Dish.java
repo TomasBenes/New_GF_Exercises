@@ -5,24 +5,18 @@ import java.util.HashMap;
 
 public class Dish {
     private String name;
-    private Ingredients ingredient1;
-    private Ingredients ingredient2;
+    private ArrayList <Ingredients> ingredients;
 
-    public Dish () {
-
-    }
-
-    public Dish (String name, Ingredients ingredient1, Ingredients ingredient2) {
-        this.ingredient1 = ingredient1;
-        this.ingredient2 = ingredient2;
+    public Dish (String name, ArrayList ingredients) {
         this.name = name;
-
+        Ingredients ingredients1 = new Ingredients(name, ingredients);
+        Ingredients ingredients2 = new Ingredients(name, ingredients);
+        this.ingredients = ingredients;
+        this.ingredients.add(ingredients1);
+        this.ingredients.add(ingredients2);
     }
 
     public ArrayList<Ingredients> getIngredients () {
-        ArrayList <Ingredients> ingredients = new ArrayList<>();
-        ingredients.add(this.ingredient1);
-        ingredients.add(this.ingredient2);
         for (Ingredients ingredient: ingredients) {
             System.out.println("For this meal we need: " + ingredient.amount + " x " + ingredient.ingredient);
         }

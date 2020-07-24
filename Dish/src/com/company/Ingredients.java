@@ -1,14 +1,14 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Ingredients extends Dish {
     String ingredient;
     int amount;
 
-    public Ingredients () {
+    public Ingredients (String name, ArrayList ingredients) {
+        super(name, ingredients);
 
     }
 
-    public Ingredients(String name, Ingredients ingredient1, Ingredients ingredient2) {
-        super(name, ingredient1, ingredient2);
-    }
 }

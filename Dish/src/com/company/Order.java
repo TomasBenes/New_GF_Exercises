@@ -9,8 +9,8 @@ public class Order {
     private String status = "created";
     private ArrayList<Dish> dishes;
 
-    public Order () {
-        this.dishes = new ArrayList<>();
+    public Order (ArrayList<Dish> dishes) {
+        this.dishes = dishes;
     }
 
     public void delay () {
