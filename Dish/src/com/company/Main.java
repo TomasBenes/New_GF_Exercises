@@ -23,7 +23,17 @@ public class Main {
         address - a string, which can be set through the constructor just like the dishes
         Finally create an OfflineOrder which is a special Order, it has one more private field
         table - a number, it is set from the constructor just like the dishes*/
+        Ingredients forBurger1 = new Ingredients();
+        forBurger1.ingredient = "beef";
+        forBurger1.amount = 2;
 
+        Ingredients forBurger2 = new Ingredients();
+        forBurger2.ingredient = "bun";
+        forBurger2.amount = 1;
+
+        Dish burger = new Dish("Burger", forBurger1, forBurger2);
+        System.out.println(burger.getName());
+        System.out.println(burger.getIngredients());
 
 
 
