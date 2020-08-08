@@ -1,0 +1,36 @@
+caption {
+  text-align: left;
+  font-size: large;
+  font-weight: bold;
+  color: black;
+  padding: 5px;
+}
+
+th {
+  background-color: #1B1E24;
+  color: #ABB2B9;
+  text-align: left;
+  padding: 20px;
+  font-size: x-large;
+  border: 2px solid #9EA7AF;
+}
+
+td {
+  color: #6C708A;
+  padding: 20px;
+  font-size: large;
+  border: 2px solid #9EA7AF;
+}
+
+
+table {
+  border: 50px solid #3E94EC;
+  width: 700px;
+  line-height:24px;
+  border-collapse: collapse;
+  margin: 10% auto;
+}
+
+tr:nth-child(2n) {
+  background-color: #EBEBEB;
+}

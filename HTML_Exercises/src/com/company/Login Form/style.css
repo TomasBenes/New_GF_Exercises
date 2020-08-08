@@ -1,0 +1,60 @@
+html {
+  height: 100%;
+}
+
+h1 {
+  text-align: left;
+  font-size: large;
+  font-weight: bold;
+  color: grey;
+  
+}
+
+body {
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+form {
+  background-color: white;
+  border: 20px solid white;
+  padding: 30px;
+}
+
+p{
+  text-align: right;
+  font-size: xx-small;
+}
+
+label {
+  font-size: x-small;
+}
+
+#username {
+  display: block;
+  width: 250px;
+  height: 30px;
+  
+}
+
+#username:focus {
+  outline: none !important;
+    border:2px solid green;
+}
+#password {
+display: block;
+width: 250px;
+  height: 30px;
+}
+
+
+button {
+  border-radius: 30%;
+  padding: 10px;
+  width: 80px;
+  background-color: black;
+  color: white;
+}
